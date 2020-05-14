@@ -13,15 +13,35 @@ var papel = "papel";
 var tijera = "tijera";
 
 function game(element1, element2) {
-    if (element1 == element2) {
-        console.log('Hemos quedado empate. ' + element1 + ' vs. ' + element2);
-    } else if ((element1 == piedra && element2 == tijera) || (element1 == papel && element2 == piedra) || (element1 == tijera && element2 == papel)) {
-        console.log('Gana el jugador1 porque ha sacado ' + element1 + ' y el jugador 2 ' + element2);
-    } else {
-        console.log('Gana el jugador2 porque ha sacado ' + element2 + ' y el jugador 1 ' + element1);
+    if (element1 == piedra) { //jugador 1 saca piedra
+        if (element2 == piedra) { //jugador 2 saca piedra
+            console.log('Hemos quedado empate: ' + element1 + ' vs. ' + element2);
+        } else if (element2 == papel) { //jugador 2 saca papel
+            console.log('Gana jugador2: ' + element1 + ' vs. ' + element2);
+        } else { //jugador 2 saca tijera
+            console.log('Gana jugador1: ' + element1 + ' vs. ' + element2);
+        }
+    } else if (element1 == papel) { //jugador 1 saca papel
+        if (element2 == piedra) { //jugador 2 saca piedra
+            console.log('Gana jugador1: ' + element1 + ' vs. ' + element2);
+        } else if (element2 == papel) { //jugador 2 saca papel
+            console.log('Hemos quedado empate: ' + element1 + ' vs. ' + element2);
+        } else { //jugador 2 saca tijera
+            console.log('Gana jugador2: ' + element1 + ' vs. ' + element2);
+        }
+    } else { //jugador 1 saca tijera
+        if (element2 == piedra) { //jugador 2 saca piedra
+            console.log('Gana jugador2: ' + element1 + ' vs. ' + element2);
+        } else if (element2 == papel) { //jugador 2 saca papel
+            console.log('Gana jugador1: ' + element1 + ' vs. ' + element2);
+        } else { //jugador 2 saca tijera
+            console.log('Hemos quedado empate: ' + element1 + ' vs. ' + element2);
+        }
     }
 }
 
+console.log('IF');
+console.log('JUGADOR1 VS JUGADOR2');
 //casos empate
 console.log('---------CASOS EN LOS QUE HAY EMPATE---------');
 game(piedra, piedra);
