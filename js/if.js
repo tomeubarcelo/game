@@ -18,25 +18,33 @@ function game(element1, element2) {
             console.log('Hemos quedado empate: ' + element1 + ' vs. ' + element2);
         } else if (element2 == papel) { //jugador 2 saca papel
             console.log('Gana jugador2: ' + element1 + ' vs. ' + element2);
-        } else { //jugador 2 saca tijera
+        } else if (element2 == tijera) { //jugador 2 saca tijera
             console.log('Gana jugador1: ' + element1 + ' vs. ' + element2);
+        } else {
+            console.log('Introduce piedra, papel o tijera');
         }
     } else if (element1 == papel) { //jugador 1 saca papel
         if (element2 == piedra) { //jugador 2 saca piedra
             console.log('Gana jugador1: ' + element1 + ' vs. ' + element2);
         } else if (element2 == papel) { //jugador 2 saca papel
             console.log('Hemos quedado empate: ' + element1 + ' vs. ' + element2);
-        } else { //jugador 2 saca tijera
+        } else if (element2 == tijera) { //jugador 2 saca tijera
             console.log('Gana jugador2: ' + element1 + ' vs. ' + element2);
+        } else {
+            console.log('Introduce piedra, papel o tijera');
         }
-    } else { //jugador 1 saca tijera
+    } else if (element1 == tijera) { //jugador 1 saca tijera
         if (element2 == piedra) { //jugador 2 saca piedra
             console.log('Gana jugador2: ' + element1 + ' vs. ' + element2);
         } else if (element2 == papel) { //jugador 2 saca papel
             console.log('Gana jugador1: ' + element1 + ' vs. ' + element2);
-        } else { //jugador 2 saca tijera
+        } else if (element2 == tijera) { //jugador 2 saca tijera
             console.log('Hemos quedado empate: ' + element1 + ' vs. ' + element2);
+        } else {
+            console.log('Introduce piedra, papel o tijera');
         }
+    } else {
+        console.log('Introduce piedra, papel o tijera');
     }
 }
 

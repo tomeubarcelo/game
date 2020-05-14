@@ -28,6 +28,8 @@ function game_with_switch(element1, element2) {
                     //piedra vs tijera -> gana piedra
                     console.log('Gana jugador1: ' + element1 + ' vs. ' + element2);
                     break;
+                default:
+                    console.log('Introduce piedra, papel o tijera');
             }
             break;
         case papel: //caso en el que jugador1 saca papel
@@ -44,6 +46,8 @@ function game_with_switch(element1, element2) {
                     //papel vs tijera -> gana tijera
                     console.log('Gana jugador2: ' + element1 + ' vs. ' + element2);
                     break;
+                default:
+                    console.log('Introduce piedra, papel o tijera');
             }
             break;
         case tijera: //caso en el que jugador1 saca tijera
@@ -60,13 +64,15 @@ function game_with_switch(element1, element2) {
                     //tijera vs tijera -> empate
                     console.log('Hemos quedado empate: ' + element1 + ' vs. ' + element2);
                     break;
+                default:
+                    console.log('Introduce piedra, papel o tijera');
             }
             break;
         default:
-            console.log('otra');
-            break;
+            console.log('Introduce piedra, papel o tijera');
     }
 }
+
 console.log('-----------------------------------------------');
 console.log('SWITCH');
 console.log('JUGADOR1 VS JUGADOR2');
